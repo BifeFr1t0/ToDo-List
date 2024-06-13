@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+h1{
+    background-color: rgb(141, 38, 238);
+}
+.control{
+    margin:2vw;
+    justify-content:center
+}
+input{
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+
+#move{
+    transition: 0.2;
+    border:none;
+    background-color: rgba(136, 136, 136, 0.363);
+    border-radius: 100%;
+    width:1.9vw;
+    height: 1.9vw;
+    margin-left: 1vw;
+}
+.to-do,.doing,.finished{
+    background-color:rgb(184, 175, 231) ;
+    min-height:300px ;
+    border-radius: 3%;
+    
+    
+}
+.task:hover{
+    transition: 0.2s;
+}
+
+.task{
+    background-color: rgb(172, 162, 226) ;
+    text-align: justify;
+    border-radius: 5%;
+}
