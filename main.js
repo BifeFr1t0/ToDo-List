@@ -2,15 +2,32 @@ const toDo = document.querySelector('.to-do');
 const doing = document.querySelector('.doing');
 const finished = document.querySelector('.finished');
 const input = document.querySelector('input');
+const counter = document.querySelector('.counter');
+var caracterCounter = ''
+
+    input.addEventListener('mouseover',()=>{
+        counter.style.backgroundColor =''
+        caracterCounter = setInterval(() => {
+        var texto = document.querySelector('#texto').value;
+        counter.innerHTML= texto.length;
+    }, 40);})
+
+
+
+
 
 function toDoTask() {
-    const texto = document.querySelector('#texto').value;
+    clearInterval(caracterCounter)
+    texto = document.querySelector('#texto').value;
 
     if (texto === '') {
         input.setAttribute('placeholder', 'A tarefa foi nula');
         return;
     }
-
+    if(texto.length >32){
+        counter.style.backgroundColor = 'rgb(255, 09, 69)'
+        return
+    }
     input.setAttribute('placeholder', 'Digite uma tarefa');
 
     const task = document.createElement('div');
